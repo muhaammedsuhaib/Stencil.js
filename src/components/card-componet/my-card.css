@@ -1,0 +1,124 @@
+/* Container styling */
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 20px;
+    background: rgba(255, 0, 0, 0.406);
+    height: 100vh;
+    color: white;
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+  }
+  
+  /* Box styling */
+  .box1, .box2, .box3 {
+    margin: 10px;
+    width: 300px; /* Default width */
+    padding: 20px;
+    border-radius: 8px;
+    background: yellowgreen;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .box1 {
+    background: #4CAF50; /* Green color for the Add Task box */
+  }
+  
+  .box2 {
+    background: #FFC107; /* Amber color for the Pending box */
+  }
+  
+  .box3 {
+    background: #2196F3; /* Blue color for the Completed box */
+  }
+  
+  /* Hover effects */
+  .box1:hover, .box2:hover, .box3:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Heading styling */
+  .box1 h1, .box2 h1, .box3 h1 {
+    margin: 0;
+    font-size: 1.5em;
+    color: white;
+  }
+  
+  /* Task styling */
+  .task {
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 4px;
+    background: #fff;
+    color: #333;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .task p {
+    margin: 0;
+    padding: 0;
+    font-size: 0.9em;
+  }
+  
+  /* Input and button styling */
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  input[type="text"] {
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    font-size: 1em;
+  }
+  
+  button {
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background: #007BFF;
+    color: white;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  button:hover {
+    background: #0056b3;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .box1, .box2, .box3 {
+      width: 90%; /* Full width on smaller screens */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .box1, .box2, .box3 {
+      width: 100%; /* Full width on very small screens */
+    }
+  
+    .box1 h1, .box2 h1, .box3 h1 {
+      font-size: 1.2em; /* Smaller font size on very small screens */
+    }
+  
+    input[type="text"] {
+      font-size: 0.9em; /* Smaller font size for input */
+    }
+  
+    button {
+      font-size: 0.9em; /* Smaller font size for button */
+    }
+  }
+  
